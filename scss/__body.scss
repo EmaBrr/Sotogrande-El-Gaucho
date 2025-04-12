@@ -115,8 +115,7 @@ p {
     display: flex;
     align-items: center;
     flex-direction: column;
-    // justify-content: space-between;
-    justify-content: center;
+    justify-content: space-between;
     justify-items: center;
     padding: 20px;
     width: 100%;
@@ -125,11 +124,12 @@ p {
     background: none !important;
     color: white;
     height: auto;
-    // padding-bottom: 200px;
     height: 100vh;
+    min-height: 800px;
   
-    @media screen and (max-width: $m) {
+    @media screen and (max-width: $m) and (orientation: landscape){
       padding: 50px 15px 15px 15px;
+      justify-content: space-evenly;
     }
   
     .section-container {

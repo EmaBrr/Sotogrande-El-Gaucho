@@ -702,7 +702,7 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   justify-items: center;
   padding: 20px;
   width: 100%;
@@ -712,10 +712,12 @@ p {
   color: white;
   height: auto;
   height: 100vh;
+  min-height: 800px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) and (orientation: landscape) {
   .section {
     padding: 50px 15px 15px 15px;
+    justify-content: space-evenly;
   }
 }
 .section .section-container {
@@ -1050,6 +1052,8 @@ footer {
   position: relative;
   display: block;
   padding: 50px;
+  height: auto;
+  display: block;
 }
 footer .footer-content {
   display: flex;

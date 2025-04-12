@@ -126,8 +126,14 @@ let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
   const currentScrollY = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight;
+  const winHeight = window.innerHeight;
 
-  if (currentScrollY > lastScrollY && currentScrollY > 200) {
+  // Check if we're at the bottom of the page
+  if (currentScrollY + winHeight >= docHeight - 1) {
+    backToTop.style.opacity = '1';
+    backToTop.style.visibility = 'visible';
+  } else if (currentScrollY > lastScrollY && currentScrollY > 200) {
     // Scrolling down
     backToTop.style.opacity = '1';
     backToTop.style.visibility = 'visible';
